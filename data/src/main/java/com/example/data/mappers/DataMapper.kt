@@ -1,6 +1,6 @@
 package com.example.data.mappers
 
-import com.example.data.MemberListDTO
+import com.example.data.models.MemberListDTO
 import com.example.domain.model.MemberListEntity
 import javax.inject.Inject
 
