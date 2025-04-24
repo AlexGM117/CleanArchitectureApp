@@ -9,5 +9,4 @@
         android:fullBackupContent="@xml/backup_rules">
 
     </application>
-
 </manifest>

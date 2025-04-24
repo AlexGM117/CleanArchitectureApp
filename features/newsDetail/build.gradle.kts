@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.presentation"
+    namespace = "com.example.newsdetail"
     compileSdk = 35
 
     defaultConfig {
@@ -43,7 +43,6 @@ android {
 dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":features:topNewsHeadline"))
 
     implementation(libs.navCompose)
     implementation(libs.dagger)
@@ -53,9 +52,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     implementation(libs.splash.screen)
 
-    //implementation(libs.androidx.core.ktx)
-    //implementation(libs.androidx.appcompat)
-    //implementation(libs.material)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

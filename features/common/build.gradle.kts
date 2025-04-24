@@ -1,13 +1,13 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    //id("kotlin-kapt")
+    //id("dagger.hilt.android.plugin")
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.example.presentation"
+    namespace = "com.example.common"
     compileSdk = 35
 
     defaultConfig {
@@ -15,11 +15,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildFeatures {
-        viewBinding = true
-        compose = true
     }
 
     buildTypes {
@@ -38,17 +33,17 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+        compose = true
+    }
 }
 
 dependencies {
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":features:topNewsHeadline"))
-
-    implementation(libs.navCompose)
-    implementation(libs.dagger)
-    kapt(libs.daggerCompiler)
-    implementation(libs.hilt)
+    //implementation(libs.navCompose)
+    //implementation(libs.dagger)
+    //kapt(libs.daggerCompiler)
+    //implementation(libs.hilt)
     implementation(libs.bundles.compose)
     debugImplementation(libs.androidx.ui.tooling)
     implementation(libs.splash.screen)
