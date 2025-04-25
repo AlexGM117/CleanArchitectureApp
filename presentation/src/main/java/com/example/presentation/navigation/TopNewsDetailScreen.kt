@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.example.newsdetail.HouseMemberDetailScreen
 import com.example.presentation.util.Constants.DETAILS_ROUTE
 import com.example.presentation.util.Constants.ID
 
@@ -23,6 +24,8 @@ fun NavGraphBuilder.topNewsDetailScreen(onBack: () -> Unit){
         ),
     ) { navBackStackEntry ->
         val id  = navBackStackEntry.arguments?.getString(ID).orEmpty()
-
+        HouseMemberDetailScreen(id = id){
+            onBack()
+        }
     }
 }

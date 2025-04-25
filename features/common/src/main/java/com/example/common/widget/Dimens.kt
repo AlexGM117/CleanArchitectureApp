@@ -10,4 +10,6 @@ object Dimens {
     val eight_dp = 8.dp
     val sixteen_dp = 16.dp
     val ten_dp = 10.dp
+    val four_dp = 4.dp
+    const val FONT_SIZE_1F: Float = 1f
 }

@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
     implementation(project(":features:topNewsHeadline"))
+    implementation(project(":features:newsDetail"))
 
     implementation(libs.navCompose)
     implementation(libs.dagger)
