@@ -18,10 +18,10 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"https:/api.gamesofthronesquotes.xyz/v1/\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.gameofthronesquotes.xyz/v1/\"")
         }
         release {
-            buildConfigField("String", "BASE_URL", "\"https:/api.gamesofthronesquotes.xyz/v1/\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.gameofthronesquotes.xyz/v1/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
