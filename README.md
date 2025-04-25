@@ -11,7 +11,7 @@ A modular and scalable Android app architecture using MVVM, MVI, and Clean Archi
 | Module         | Purpose |
 |----------------|---------|
 | 🟢 `app`         | Main entry point. Initializes DI, navigation, and app-wide config |
-| 🔵 `feature-*`   | Modularized features like login, profile, dashboard |
+| 🔵 `feature-*`   | Modularized features like list, detail |
 | 🟡 `presentation`| Jetpack Compose UI, ViewModels, and MVI state contracts |
 | 🟠 `domain`      | Business logic: Use cases, entities, and interfaces |
 | 🔴 `data`        | Implements repositories, handles network/local data |
@@ -49,7 +49,7 @@ A modular and scalable Android app architecture using MVVM, MVI, and Clean Archi
   * Sets up DI, navigation, and theme
 
 **feature-***
-  * Each feature (e.g., login, profile) is in its own module
+  * Each feature (e.g., list, details) is in its own module
   * Depends on presentation, domain, and optionally data
 
 **presentation**
@@ -65,6 +65,7 @@ A modular and scalable Android app architecture using MVVM, MVI, and Clean Archi
   * Implements repositories defined in domain
   * Contains network (Retrofit), local DB (Room), and mappers
 
+---
 **📦 Tech Stack**
 
 * Kotlin
@@ -83,6 +84,8 @@ A modular and scalable Android app architecture using MVVM, MVI, and Clean Archi
 
 * Clean Architecture principles
 
+---
+
 ## Tech stack & Open-source libraries
 
 - Minimum SDK level 21.
@@ -99,6 +102,7 @@ A modular and scalable Android app architecture using MVVM, MVI, and Clean Archi
   - Repository Pattern: Acts as a mediator between different data sources and the application's business logic.
 - [Retrofit2 & OkHttp3](https://github.com/square/retrofit): Constructs REST APIs and facilitates paging network data retrieval.
 
+---
 
 **🔐 Benefits**
 * Separation of concerns
