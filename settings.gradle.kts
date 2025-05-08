@@ -21,10 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "CleanArchitectureApp"
 include(":app")
-include(":domain")
-include(":data")
-include(":presentation")
-include(":features")
-include(":features:topNewsHeadline")
-include(":features:newsDetail")
-include(":features:common")
