@@ -17,7 +17,6 @@
         <activity
             android:name="com.example.presentation.navigation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.CleanArchitectureApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
