@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    alias(libs.plugins.dagger.library)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -18,7 +18,6 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
         compose = true
     }
 
@@ -46,17 +45,23 @@ dependencies {
     implementation(project(":features:topNewsHeadline"))
     implementation(project(":features:newsDetail"))
 
-    implementation(libs.navCompose)
-    implementation(libs.dagger)
-    kapt(libs.daggerCompiler)
-    implementation(libs.hilt)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.bundles.compose)
-    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.tooling.preview)
     implementation(libs.splash.screen)
 
-    //implementation(libs.androidx.core.ktx)
-    //implementation(libs.androidx.appcompat)
-    //implementation(libs.material)
+    implementation(libs.navCompose)
+    implementation(libs.dagger)
+    ksp(libs.daggerCompiler)
+    implementation(libs.hilt)
+
+    implementation(libs.kotlinx.coroutines.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    alias(libs.plugins.dagger.library)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -35,12 +35,8 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.composeMaterial)
     implementation(libs.dagger)
-    kapt(libs.daggerCompiler)
+    ksp(libs.daggerCompiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
