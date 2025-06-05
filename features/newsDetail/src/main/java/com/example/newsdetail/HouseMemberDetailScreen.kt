@@ -5,11 +5,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.domain.model.MemberDetailsEntity
-import com.example.presentation.base.intent.MemberDetailIntent
-import com.example.presentation.base.state.HouseMemberState
-import com.example.presentation.base.widget.BaseScreen
-import com.example.presentation.base.widget.ErrorContent
-import com.example.presentation.base.widget.LoadingContent
+import com.example.common.intent.MemberDetailIntent
+import com.example.common.state.HouseMemberState
+import com.example.common.widget.BaseScreen
+import com.example.common.widget.ErrorContent
+import com.example.common.widget.LoadingContent
 
 @Composable
 fun HouseMemberDetailScreen(

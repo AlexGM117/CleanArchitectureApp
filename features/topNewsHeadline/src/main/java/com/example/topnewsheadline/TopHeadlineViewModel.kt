@@ -5,8 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.domain.model.MemberListEntity
 import com.example.domain.usecase.GetMemberListUseCase
 import com.example.domain.utils.Result
-import com.example.presentation.base.intent.MemberIntent
-import com.example.presentation.base.state.HouseMemberState
+import com.example.common.intent.MemberIntent
+import com.example.common.state.HouseMemberState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,7 +18,8 @@ import javax.inject.Inject
 class TopHeadlineViewModel @Inject constructor(
     private val getMemberListUseCase: GetMemberListUseCase
 ): ViewModel() {
-    private val _uiState = MutableStateFlow<HouseMemberState<List<MemberListEntity>>>(HouseMemberState.Loading)
+    private val _uiState = MutableStateFlow<HouseMemberState<List<MemberListEntity>>>(
+        HouseMemberState.Loading)
     val uiState : StateFlow<HouseMemberState<List<MemberListEntity>>> get() = _uiState
 
     fun handleIntent(intent: MemberIntent){

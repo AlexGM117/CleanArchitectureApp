@@ -1,4 +1,4 @@
-package com.example.presentation.base.state
+package com.example.common.state
 
 sealed interface HouseMemberState<out T> {
     data class Success<T>(val data: T): HouseMemberState<T>

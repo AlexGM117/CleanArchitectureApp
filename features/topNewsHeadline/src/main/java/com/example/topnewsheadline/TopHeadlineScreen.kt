@@ -7,13 +7,14 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.common.intent.MemberIntent
+import com.example.common.widget.BaseScreen
+import com.example.common.widget.ErrorContent
+import com.example.common.widget.LoadingContent
 import com.example.domain.model.MemberListEntity
-import com.example.presentation.base.intent.MemberIntent
-import com.example.presentation.base.state.HouseMemberState
-import com.example.presentation.base.widget.BaseScreen
-import com.example.presentation.base.widget.ErrorContent
-import com.example.presentation.base.widget.LoadingContent
+import com.example.common.state.HouseMemberState
 
 @Composable
 fun TopHeadlineScreen(
@@ -59,6 +60,19 @@ fun HouseScreenRendering(
                 ErrorContent(message = state.message)
             }
         }
+        Text(text = "My first composable")
     }
+}
 
+@Composable
+@Preview(
+    showBackground = true
+)
+fun TopHeadlineScreenPreview() {
+    HouseScreenRendering(
+        state = HouseMemberState.Success(
+            data = listOf()
+        ),
+        onItemSelected = {}
+    )
 }

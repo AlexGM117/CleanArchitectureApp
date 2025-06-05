@@ -1,4 +1,4 @@
-package com.example.presentation.base.widget
+package com.example.common.widget
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -42,7 +42,9 @@ fun BaseScreen (
                 .fillMaxSize()
                 .padding(padding),
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {  }
+        ) {
+            content()
+        }
     }
 }
 
