@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    alias(libs.plugins.dagger.library)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -45,7 +45,7 @@ dependencies {
     implementation(project(":domain"))
 
     implementation(libs.dagger)
-    kapt(libs.daggerCompiler)
+    ksp(libs.daggerCompiler)
     implementation(libs.bundles.retrofit)
 
     testImplementation(libs.junit)

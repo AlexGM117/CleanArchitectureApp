@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    //id("kotlin-kapt")
-    //id("dagger.hilt.android.plugin")
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.dagger.library)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -40,13 +40,21 @@ android {
 }
 
 dependencies {
-    //implementation(libs.navCompose)
-    //implementation(libs.dagger)
-    //kapt(libs.daggerCompiler)
-    //implementation(libs.hilt)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.bundles.compose)
-    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.tooling.preview)
     implementation(libs.splash.screen)
+
+    implementation(libs.navCompose)
+    implementation(libs.dagger)
+    ksp(libs.daggerCompiler)
+    implementation(libs.hilt)
 
     //implementation(libs.androidx.core.ktx)
     //implementation(libs.androidx.appcompat)
