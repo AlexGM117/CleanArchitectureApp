@@ -3,6 +3,7 @@ package com.example.newsdetail
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.domain.model.MemberDetailsEntity
 import com.example.common.intent.MemberDetailIntent
@@ -47,4 +48,15 @@ fun HouseMemberDetailScreenRender(
             }
         }
     }
+}
+
+@Composable
+@Preview(
+    showBackground = true
+)
+private fun HouseMemberDetailScreenRenderPreview() {
+    HouseMemberDetailScreenRender(
+        state = HouseMemberState.Success(data = emptyList()),
+        onBack = {}
+    )
 }

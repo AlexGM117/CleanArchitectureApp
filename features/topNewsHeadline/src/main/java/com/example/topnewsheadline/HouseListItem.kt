@@ -30,10 +30,6 @@ fun HouseListItem(
     item : List<MemberListEntity>,
     onItemSelected: (MemberIntent) -> Unit,
 ){
-    val members: List<MemberListEntity> = item
-    for (member in members){
-        println("MEMBER" + member)
-    }
     LazyColumn {
         items(item) { renderItems ->
             RenderItem(
