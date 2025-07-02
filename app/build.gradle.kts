@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.example"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -30,11 +30,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_24
+        targetCompatibility = JavaVersion.VERSION_24
     }
     kotlinOptions {
-        jvmTarget = "11"
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_24
+            targetCompatibility = JavaVersion.VERSION_24
+        }
     }
     buildFeatures {
         compose = true
